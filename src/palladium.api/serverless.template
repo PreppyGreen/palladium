@@ -1,0 +1,81 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Transform" : "AWS::Serverless-2016-10-31",
+  "Description" : "An AWS Serverless Application.",
+
+  "Parameters" : {
+  	"ClientId" : {
+		"Type" : "String",
+		"Description" : "Cognito Client Id.",
+		"MinLength" : "0"
+	},
+	"PoolId" : {
+		"Type" : "String",
+		"Description" : "Cognito Pool Id.",
+		"MinLength" : "0"
+	}
+  },
+
+  "Resources" : {
+
+	"Register" : {
+      "Type" : "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "palladium.api::palladium.api.RegisterLambda::Invoke",
+        "Runtime": "dotnetcore2.0",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Role": null,
+        "Policies": [ "AWSLambdaFullAccess" ],
+		"Environment" : {
+          "Variables" : {
+            "ClientId" : { "Ref":"ClientId" },
+			"PoolId" : { "Ref":"PoolId" }
+          }
+		},
+        "Events": {
+          "PutResource": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/register",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+
+	"SignIn" : {
+      "Type" : "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "palladium.api::palladium.api.SignInLambda::Invoke",
+        "Runtime": "dotnetcore2.0",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Role": null,
+        "Policies": [ "AWSLambdaFullAccess" ],
+		"Environment" : {
+          "Variables" : {
+            "ClientId" : { "Ref":"ClientId" },
+			"PoolId" : { "Ref":"PoolId" }
+          }
+		},
+        "Events": {
+          "PutResource": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/signin",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    }
+
+  },
+
+  "Outputs" : {
+  }
+}
