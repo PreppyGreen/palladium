@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "palladium.api", "palladium.api.csproj", "{09358AAB-C2C1-460C-8B30-2FB371741781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "palladium.api", "palladium.api\palladium.api.csproj", "{09358AAB-C2C1-460C-8B30-2FB371741781}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "palladium.api.Tests", "..\palladium.api.Tests\palladium.api.Tests.csproj", "{D545AE56-2A98-454A-907A-A63513FC28B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "palladium.api.Tests", "palladium.api.Tests\palladium.api.Tests.csproj", "{D545AE56-2A98-454A-907A-A63513FC28B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "molybdenum.core", "..\..\..\..\molybdenum\molybdenum\src\molybdenum.core\molybdenum.core.csproj", "{5F0B2DA2-BF7B-41C2-B407-13919C78577B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "molybdenum.core", "..\..\..\molybdenum\molybdenum\src\molybdenum.core\molybdenum.core.csproj", "{5F0B2DA2-BF7B-41C2-B407-13919C78577B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "molybdenum", "..\..\..\..\molybdenum\molybdenum\src\molybdenum\molybdenum.csproj", "{9D23C2AE-1107-48CF-91AF-3AA7B119568D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "molybdenum", "..\..\..\molybdenum\molybdenum\src\molybdenum\molybdenum.csproj", "{9D23C2AE-1107-48CF-91AF-3AA7B119568D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
