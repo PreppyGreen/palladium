@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.APIGatewayEvents;
-using Newtonsoft.Json;
 using palladium.api.Cognito;
 using molybdenum.Logging;
 
