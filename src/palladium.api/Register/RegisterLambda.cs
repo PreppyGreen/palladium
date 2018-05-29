@@ -47,8 +47,9 @@ namespace palladium.api.Register
 
                 var data = new
                 {
+                    isSuccess = true,
                     userConfirmed = signUpResponse.UserConfirmed,
-                    userSub = signUpResponse.UserSub
+                    accountId = signUpResponse.UserSub
                 };
 
                 //Response
